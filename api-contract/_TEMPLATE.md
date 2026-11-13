@@ -39,3 +39,4 @@ Short description of what the call does and when it's used.
 | | | |
 
 For Kafka, replace Request and Response with the request topic, the reply topic and the two payloads, and state the timeout before a resend.
+
