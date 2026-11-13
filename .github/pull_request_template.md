@@ -2,6 +2,11 @@
 
 ## Endpoints affected
 
+## Checks
+
+- [ ] `python3 scripts/check_contract.py` passes locally
+- [ ] Version bumped and Changelog row added
+
 ## Breaking change?
 
 - [ ] No
