@@ -49,6 +49,7 @@ The exchange files follow section 3 ("Subsystem Exchange Responsibilities") of b
 
 ## Changing the contract
 
-1. Open a pull request. Don't push straight to `main`.
-2. Get approval from at least one member of **each** team. A contract change that only one side has seen doesn't count as agreed.
-3. If the change breaks an existing endpoint, say so in the PR title and post it in both teams' stand-up notes.
+1. Branch as `<type>/short-name` (`feat`, `fix`, `docs` or `chore`, e.g. `docs/room-search-endpoints`) and open a pull request. Nobody can push straight to `main`.
+2. GitHub doesn't require an approval here, so changes can land quickly. Still, tag someone from the other team on the PR. A contract change only one side has seen doesn't count as agreed.
+3. Squash merge it. The PR title becomes the commit message.
+4. If the change breaks an existing endpoint, say so in the PR title and post it in both teams' stand-up notes.

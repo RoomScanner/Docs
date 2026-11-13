@@ -1,0 +1,19 @@
+name: branch-name
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, edited]
+
+jobs:
+  branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch name
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          if [[ ! "$BRANCH" =~ ^(feat|fix|docs|chore)/[a-z0-9-]+$ ]]; then
+            echo "::error::Branch '$BRANCH' doesn't follow the naming convention. Use <type>/short-name, e.g. docs/room-search-endpoints (types: feat, fix, docs, chore). Rename it with: git branch -m <new-name> && git push origin -u <new-name>, then open a new PR."
+            exit 1
+          fi
+          echo "Branch name OK: $BRANCH"
